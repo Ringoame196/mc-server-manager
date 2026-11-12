@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.3.21"
+    kotlin("jvm") version "2.0.20"
 }
 
 group = "org.github.ringoame196"
@@ -14,7 +14,7 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(22)
+    jvmToolchain(17)
 }
 
 tasks.test {
