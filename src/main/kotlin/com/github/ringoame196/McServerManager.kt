@@ -1,9 +1,13 @@
-package org.github.ringoame196
+package com.github.ringoame196
 
+import org.slf4j.LoggerFactory
 import java.io.OutputStreamWriter
 import kotlin.concurrent.thread
 
+@Suppress("TooGenericExceptionCaught")
 object McServerManager {
+    private val logger = LoggerFactory.getLogger("McServerManager")
+
     fun start(mcServer: McServer) : ActiveMcServer? {
         try {
             val processBuilder = ProcessBuilder(
@@ -40,7 +44,7 @@ object McServerManager {
             val activeMcServer = ActiveMcServer(writer,process)
             return activeMcServer
         } catch (e: Exception) {
-            e.printStackTrace()
+            logger.error("エラーが発生しました", e)
         }
         return null
     }

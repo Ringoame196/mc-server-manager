@@ -1,4 +1,4 @@
-package org.github.ringoame196
+package com.github.ringoame196
 
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty

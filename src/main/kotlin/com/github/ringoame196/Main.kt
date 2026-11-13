@@ -1,4 +1,4 @@
-package org.github.ringoame196
+package com.github.ringoame196
 
 fun main() {
     val port = 8080
