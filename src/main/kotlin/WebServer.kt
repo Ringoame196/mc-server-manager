@@ -10,7 +10,7 @@ class WebServer(private val port: Int) {
     fun start() {
         embeddedServer(Netty, port = port) {
             routing {
-                get("/") {
+                get("/test") {
                     call.respondText("test")
                 }
             }
