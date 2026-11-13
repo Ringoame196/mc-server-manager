@@ -1,4 +1,4 @@
-package org.github.ringoame196
+package com.github.ringoame196
 
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
@@ -10,7 +10,7 @@ class WebServer(private val port: Int) {
     fun start() {
         embeddedServer(Netty, port = port) {
             routing {
-                get("/") {
+                get("/test") {
                     call.respondText("test")
                 }
             }

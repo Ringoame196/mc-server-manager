@@ -55,3 +55,9 @@ tasks.withType<ShadowJar> {
 
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
+
+tasks {
+    build {
+        dependsOn(shadowJar)
+    }
+}
