@@ -15,12 +15,14 @@ repositories {
 }
 
 val ktorVersion = "3.0.0"
+val sqliteVersion = "3.46.1.0"
 dependencies {
     testImplementation(kotlin("test"))
     implementation("io.ktor:ktor-server-core:${ktorVersion}")
     implementation("io.ktor:ktor-server-netty:${ktorVersion}")
     implementation("io.ktor:ktor-server-html-builder:${ktorVersion}")
     implementation("org.slf4j:slf4j-simple:2.0.13")
+    implementation("org.xerial:sqlite-jdbc:$sqliteVersion") // SQLite
 }
 
 application {
