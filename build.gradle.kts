@@ -7,7 +7,7 @@ plugins {
     id("io.gitlab.arturbosch.detekt") version "1.23.6"
 }
 
-group = "org.github.ringoame196"
+group = "com.github.ringoame196"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -26,7 +26,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("org.github.ringoame196.MainKt")
+    mainClass.set("com.github.ringoame196.MainKt")
 }
 
 detekt {
@@ -45,14 +45,14 @@ tasks.test {
     useJUnitPlatform()
 }
 
-// Shadowタスクの設定をひとつに統合
 tasks.withType<ShadowJar> {
-    archiveBaseName.set("PhotoViewer")
+    // プロジェクト名に合わせる（または設定を削除してデフォルトに従う）
+    archiveBaseName.set("mc-server-manager")
     archiveClassifier.set("")
-    archiveVersion.set("")
+    archiveVersion.set("1.0-SNAPSHOT")
 
     manifest {
-        attributes["Main-Class"] = "org.github.ringoame196.MainKt"
+        attributes["Main-Class"] = "com.github.ringoame196.MainKt"
     }
 
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
