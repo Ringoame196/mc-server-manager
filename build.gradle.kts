@@ -63,3 +63,19 @@ tasks {
         dependsOn(shadowJar)
     }
 }
+
+tasks.named("startShadowScripts") {
+    dependsOn(tasks.named("jar"))
+}
+
+tasks.named("distZip") {
+    dependsOn(tasks.named("shadowJar"))
+}
+
+tasks.named("distTar") {
+    dependsOn(tasks.named("shadowJar"))
+}
+
+tasks.named("startScripts") {
+    dependsOn(tasks.named("shadowJar"))
+}
